@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #dae4ff;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+.header{
+width: 100%;
+padding: 40px 0;
+display: flex;
+align-items: center;
+
+}
+
+.logo{
+    flex: 1;
+
+}
+
+.logo img{
+    width: 170px;
+    cursor: pointer;
+}
+
+.btn{
+   padding: 15px 40px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2)
+}
+
+
+.menu{
+    width: 50px;
+    margin-left: 30px;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+
+
+}
+
+.main{
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+ 
+    overflow: hidden;
+ 
+
+}
+
+.text, .img{
+    flex-basis: 50%;
+    overflow: hidden;
+}
+
+.img{
+    width: 100%;
+
+}
+.text{
+  padding: 8% 5%;
+    position: relative;
+}
+
+.text h1{
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    color: #333
+}
+
+.text p{
+   color: #777;
+   line-height: 22px;
+   margin: 15px 0 30px;
+   
+    
+
+}
+
+
+ul{
+    position: absolute;
+    bottom: 30px;
+}
+
+ul li{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #bfbfbf;
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.active{
+    background-color: black
+}
+
+.zoom{
+
+    animation:  zoom 0.5s linear 1;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+@media (max-width: 600px){
+    .container{
+        WIDTH: 115%;    
+    }
+
+    .btn{
+     display: none;
+    }
+
+    .main{
+        flex-direction:  column;
+    }
+
+    .text , .img{
+        flex-basis: 50%;
+    }
+
+  
+    .text h1{
+       font-size: 40px;
+       line-height: 50px;
+    }
+
+    ul{
+        position: absolute;
+        bottom: -3px;
+    }
+}
